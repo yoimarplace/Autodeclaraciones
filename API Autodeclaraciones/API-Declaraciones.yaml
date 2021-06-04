@@ -8,15 +8,6 @@ info:
   description: |-
     Sistema que permite a las entidades territoriales recaudar diferentes tipos de rentas que sean autodeclarables por los contribuyentes; para ésto los usuarios declarantes o contribuyentes podrán realizar el diligenciamiento, firma electrónica y pago del impuesto presentado a través de la plataforma de pagos webcheckout de Placetopay.
 
-    Los metodos a consumir para el proceso de integración son:
-
-    **Integración método income-request-aio**
-
-    **Integración método income-pdf**
-
-    **Integración método information-request**
-
-
     A continuación se detallan las etapas que se deben tener presentes al momento de integrar una renta nacional en el sistema de autodeclaraciones.
 
     * **Integración método income-request-aio**: Método encargado de levantar la sesión, enviando toda la trama de información correspondiente para crear la documentación en Placetopay en formato PDF de la información suministrada y a si el declarante pueda pagar. El declarante al regresar de dicha transacción se debe consumir el metodo **information-request** y mostrar en una segunda instancia el detalle de la Autodeclaración que acaba de pagar.
