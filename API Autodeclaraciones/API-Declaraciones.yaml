@@ -8,6 +8,15 @@ info:
   description: |-
     Sistema que permite a las entidades territoriales recaudar diferentes tipos de rentas que sean autodeclarables por los contribuyentes; para ésto los usuarios declarantes o contribuyentes podrán realizar el diligenciamiento, firma electrónica y pago del impuesto presentado a través de la plataforma de pagos webcheckout de Placetopay.
 
+    Los metodos a consumir para el proceso de integración son:
+
+    **Integración método income-request-aio**
+
+    **Integración método income-pdf**
+
+    **Integración método information-request**
+
+
     A continuación se detallan las etapas que se deben tener presentes al momento de integrar una renta nacional en el sistema de autodeclaraciones.
 
     * **Integración método income-request-aio**: Método encargado de levantar la sesión, enviando toda la trama de información correspondiente para crear la documentación en Placetopay en formato PDF de la información suministrada y a si el declarante pueda pagar. El declarante al regresar de dicha transacción se debe consumir el metodo **information-request** y mostrar en una segunda instancia el detalle de la Autodeclaración que acaba de pagar.
@@ -103,11 +112,7 @@ paths:
                     reason: 400
                     message: La lista de declarantes debe incluir al representante legal
       description: |
-        Toda petición realizada a Placetopay debe llevar el objeto authorización. 
-
-        El método information-request, metodo que permite pagar la declaración al crear la sesión enviando toda la trama de información requerida en una petición tanto la información para crear empresa como crear un usuarios.
-
-        IMPORTANTE: Únicamente los usuarios autorizados podrán interactuar con la declaración.
+        Se utiliza para crear la sesión enviando toda la trama de información, en una sola petición, tanto la información para realizar el pago de la declaración.
 
         El API se comporta diferente dependiendo del tipo de declaración, por ende se debe tener en cuenta algunos campos especiales:
 
@@ -894,8 +899,9 @@ paths:
     post:
       summary: Information Request
       operationId: post-information-request
-      description: |-
-        Toda petición realizada a Placetopay debe llevar el objeto authorización. Este método permite consultar la información de la declaración (firmas, estado e información de pago, estado de la declaración), la consulta a éste método debe ser realizada con el requestId obtenido en el método `income-request-aio`.
+      description: |
+        Este método se usa para consultar la información de la declaración (firmas, estado e información de pago, estado de la declaración), esta debe ser realizada con el requestId obtenido en el método `income-request-aio`.
+
         El sistema debe consultar la información de las declaraciones por un proceso de sonda que se debe ejecutar con una **iteracción de 1 hora**, y sólo debe ser consultado en caso de que las declaraciones no tengan un estado de pago "aprobado", en caso de la que declaración no requiera pago (valor de pago = 0) no se debe realizar proceso de sonda, el estado
         de la declaración será "Presentado".
       requestBody:
@@ -1219,7 +1225,7 @@ paths:
       description: |-
         Toda petición realizada a Placetopay debe llevar el objeto authorización. 
 
-        El método income-pdf permite obtener el pdf de la declaración, la solicitud se realiza con el requestId obtenido del método `income-request-aio`; el pdf obtenido sera un string codificado en base64, por ende debe ser decodificado en la integración realizada por el ente municipal.
+        El método income-pdf se usa para obtener el pdf de la declaración, la solicitud se realiza con el requestId obtenido del método `income-request-aio`; el pdf obtenido sera un string codificado en base64, por ende debe ser decodificado en la integración realizada por el ente municipal.
       requestBody:
         content:
           application/json:
@@ -1625,7 +1631,7 @@ paths:
                     reason: 401
                     message: El usuario no está autorizado para ejecutar la acción.
       description: |-
-        Toda petición realizada a Placetopay debe llevar el objeto authorización. Esta se implementa en caso de necesitar crear/actualizar uno o mas usuarios authorizados a pagar en el sistema de Autodeclaraciones. Los usuarios authorizados son todas aquellas personas que hacen parte de una empresa y estan habilitados para diligenciar, autorizar y/o pagar una declaración.
+        Se usa en caso de necesitar crear/actualizar uno o mas usuarios authorizados a pagar en el sistema de Autodeclaraciones. Los usuarios authorizados son todas aquellas personas que hacen parte de una empresa y estan habilitados para diligenciar, autorizar y/o pagar una declaración.
 
         Permisos: manage-company-bidders.api
       parameters:
