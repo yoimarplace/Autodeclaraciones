@@ -3,8 +3,8 @@
 Todas las solicitudes a la web deben ser autenticadas con WS Security UsernameToken Profile 1.1
 
 La conformación para la autenticación debe ser enviada sobre el objeto: **`authorization`** el cual lleva los atributos de 
- * **`username`
- * ** y **`secret`** 
+ * **`username`**
+ * **`secret`** 
 
 los cuales llevan los valores otorgados por Placetopay.
 
