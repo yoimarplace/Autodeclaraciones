@@ -103,7 +103,7 @@ paths:
                     reason: 400
                     message: La lista de declarantes debe incluir al representante legal
       description: |
-        Se utiliza para crear la sesión enviando toda la trama de información, en una sola petición, para realizar el pago de la declaración.
+        Se utiliza para crear la sesión enviando toda la trama de información, para realizar el pago de la declaración. Y retorna el requestID y el redirecTO.
 
         El API se comporta diferente dependiendo del tipo de declaración, por ende se debe tener en cuenta algunos campos especiales:
 
