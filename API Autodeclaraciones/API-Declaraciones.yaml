@@ -16,7 +16,7 @@ info:
 
     * **Integración método information-request**: Este método permite consultar la información de la declaración (estado de la declaración, firmas, estado e información de pago), la consulta a éste método debe ser realizada con el requestId obtenido en el método income-request-aio. 
 
-    Adicional se debe desarrollar una sonda o (cron job), para consultar las transacciones que no tengan unestado de "aprobado", en caso que declaración no requiera pago (valor de pago = 0) el estado será "Presentado". La sonda se debe ejecutar cada 24 horas.
+    Adicional se debe desarrollar una sonda o (cron job), para consultar las transacciones que no tengan un estado de "aprobado", en caso que declaración no requiera pago (valor de pago = 0) el estado será "Presentado". La sonda se debe ejecutar cada 24 horas.
 
     Todo proceso de conexión a través de API debe cumplir con la integración de los 3 métodos mencionados anteriormente, ya que con ésto se realiza una étapa de certificación en donde se validan los siguientes aspectos:
 
