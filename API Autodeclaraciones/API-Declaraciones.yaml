@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: API Autodeclaraciones
-  version: '2.0'
+  version: '1.0'
   contact:
     name: David valbuena
     email: david.valbuena@evertecinc.com
