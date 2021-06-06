@@ -1622,7 +1622,7 @@ paths:
                     reason: 401
                     message: El usuario no está autorizado para ejecutar la acción.
       description: |-
-        Se usa en caso de necesitar crear/actualizar uno o mas usuarios authorizados a pagar en el sistema de Autodeclaraciones.
+        Se usa para crear/actualizar uno o mas usuarios authorizados a pagar en el sistema de Autodeclaraciones.
 
         Los usuarios authorizados son todas aquellas personas que hacen parte de una empresa y estan habilitados para diligenciar, autorizar y/o pagar una declaración.
       parameters:
