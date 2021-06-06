@@ -4,25 +4,25 @@
 
 2.  Placetopay responde con el identificador: requestID y el redirecTO.
 
-2.	Guardar el requestID en relación al usuario.
+3.	Guardar el requestID en relación al usuario.
 
-3.  Redireccionar al usuario al redirecTO.
+4.  Redireccionar al usuario al redirecTO.
 
-3.	Placetopay crea o actualiza los datos de la empresa y los datos del usuario en caso de que existan.
+5.	Placetopay crea o actualiza los datos de la empresa y los datos del usuario en caso de que existan.
 
-4.	Placetopay genera el formato PDF para proceder con las firmas virtuales.
+6.	Placetopay genera el formato PDF para proceder con las firmas virtuales.
 
-5.	El representante legal y ( el revisor fiscal ) autorizan con su usuario y contraseña para que la declaración pueda ser pagada.
+7.	El representante legal y ( el revisor fiscal ) autorizan con su usuario y contraseña para que la declaración pueda ser pagada.
 
-6.	Al ser aprobada el usuario puede proceder con el pago, el cual es redireccionado a la interfaz de Webcheckout para realizar el proceso transaccional.
+8.	Al ser aprobada el usuario puede proceder con el pago, el cual es redireccionado a la interfaz de Webcheckout para realizar el proceso transaccional.
 
-7.	Al finalizar el pago el sistema le muestra un comprobante de que la declaración ha sido pagada con el cello de certificación.
+9.	Al finalizar el pago el sistema le muestra un comprobante de que la declaración ha sido pagada con el cello de certificación.
 
-8.  El usuario regresa al comercio con la URL proporcionada por el comercio.
+10.  El usuario regresa al comercio con la URL proporcionada por el comercio.
 
-9.  Para consultar el estado de la declaración se debe consumir el metodo information-request enviando el requestID
+11.  Para consultar el estado de la declaración se debe consumir el metodo information-request enviando el requestID
 
-10. Para descargar el pdf se debe consumir el metodo income-pdf enviando el requestID y el locale.
+12. Para descargar el pdf se debe consumir el metodo income-pdf enviando el requestID y el locale.
 
 
 [Imagen de flujo](https://lucid.app/publicSegments/view/890a7af8-73bd-49f1-a91d-511cca52a1b4/image.pdf)
