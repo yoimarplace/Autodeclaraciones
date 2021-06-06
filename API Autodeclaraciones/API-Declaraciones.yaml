@@ -895,8 +895,7 @@ paths:
       description: |
         Consulta la información de la declaración (firmas, estado e información de pago, estado de la declaración).
 
-        Adicional se debe desarrollar una sonda o (cron job) que se debe ejecutar con una **iteracción de 1 hora**, y sólo debe ser consultado en caso que las declaraciones no tengan un estado de pago "aprobado", en caso de la que declaración no requiera pago (valor de pago = 0) no se debe realizar proceso de sonda, el estado
-        de la declaración será "Presentado".
+        Adicional se debe desarrollar una sonda o (cron job), para consultar las transacciones que no tengan unestado de "aprobado", en caso que declaración no requiera pago (valor de pago = 0) el estado será "Presentado". La sonda se debe ejecutar cada 24 horas.
       requestBody:
         content:
           application/json:
