@@ -1215,7 +1215,7 @@ paths:
                     status: FAILED
                     reason: '404'
                     message: La petición no es válida
-      description: 'Para obtener el pdf de la declaración, la solicitud se realiza con el requestId obtenido del método `income-request-aio`; el pdf obtenido sera un string codificado en base64, por ende debe ser decodificado en la integración realizada por el ente municipal.'
+      description: 'Obtiene el PDF de la declaración; el pdf obtenido sera un string codificado en base64, por ende debe ser decodificado en la integración realizada por el ente municipal.'
       requestBody:
         content:
           application/json:
