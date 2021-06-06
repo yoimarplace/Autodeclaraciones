@@ -893,9 +893,9 @@ paths:
       summary: Information Request
       operationId: post-information-request
       description: |
-        Consulta la información de la declaración (firmas, estado e información de pago, estado de la declaración), esta debe ser realizada con el requestId obtenido en el método `income-request-aio`.
+        Consulta la información de la declaración (firmas, estado e información de pago, estado de la declaración).
 
-        El sistema debe consultar la información de las declaraciones por un proceso de sonda que se debe ejecutar con una **iteracción de 1 hora**, y sólo debe ser consultado en caso de que las declaraciones no tengan un estado de pago "aprobado", en caso de la que declaración no requiera pago (valor de pago = 0) no se debe realizar proceso de sonda, el estado
+        El sistema debe consultar la información de las declaraciones por un proceso de sonda que se debe ejecutar con una **iteracción de 1 hora**, y sólo debe ser consultado en caso de que las declaraciones no tengan un estado de pago "aprobado", en que declaración no requiera pago (valor de pago = 0) no se debe realizar proceso de sonda, el estado
         de la declaración será "Presentado".
       requestBody:
         content:
