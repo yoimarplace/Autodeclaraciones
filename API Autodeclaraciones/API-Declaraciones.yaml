@@ -892,7 +892,7 @@ paths:
     post:
       summary: Information Request
       operationId: post-information-request
-      description: 'Consulta la información de la declaración (firmas, estado e información de pago, estado de la declaración).'
+      description: 'Obtiene la información de la declaración (firmas, estado e información de pago, estado de la declaración).'
       requestBody:
         content:
           application/json:
