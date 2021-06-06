@@ -6,7 +6,7 @@
 
 3.	Guardar el requestID en relación al usuario.
 
-4.  Redireccionar al usuario al redirecTO.
+4.  Se redirecciona al usuario al redirecTO.
 
 5.	Placetopay crea o actualiza los datos de la empresa y los datos del usuario en caso de que existan.
 
