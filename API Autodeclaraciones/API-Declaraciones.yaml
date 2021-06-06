@@ -1346,7 +1346,7 @@ paths:
                     reason: 401
                     message: El usuario no está autorizado para ejecutar la acción.
       description: |-
-        Esta se implementa en caso de necesitar crear/actualizar una empresa en el sistema de Autodeclaraciones. Las empresas son todas aquellas entidades que deben declarar los impuestos.
+        Esta se implementa en caso de necesitar crear/actualizar una empresa en el sistema de Autodeclaraciones.
 
         La empresa se puede inactivar usando el parametro status
       parameters:
