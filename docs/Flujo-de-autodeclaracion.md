@@ -1,6 +1,6 @@
 # Flujo-de-autodeclaracion
 
-1.	Para generar la declaración se debe consumir el metodo **income-request-aio** enviando la trama de información de la empresa y el declarante y una URL de retorno en el objeto: returnURL.
+1.	Para generar la declaración se debe consumir el metodo **income-request-aio** enviando la trama de información de la empresa y el declarante junto con la URL de retorno en el objeto: returnURL.
 
 2.  Si la petición es satisfactoria, Placetopay responde con el identificador: requestID y URL de redirección: redirecTO.
 
