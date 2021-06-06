@@ -6,7 +6,7 @@ info:
     name: David valbuena
     email: david.valbuena@evertecinc.com
   description: |-
-    Sistema que permite a las entidades territoriales recaudar diferentes tipos de rentas que sean autodeclarables. para ésto los usuarios declarantes o contribuyentes podrán realizar el diligenciamiento, firma electrónica y pago del impuesto presentado a través de la plataforma de pagos webcheckout de Placetopay.
+    Sistema que permite a las entidades territoriales recaudar diferentes tipos de rentas que sean autodeclarables. para ésto los usuarios declarantes o contribuyentes podrán realizar el diligenciamiento, firma electrónica y pago del impuesto a través de la plataforma de pagos webcheckout de Placetopay.
 
     A continuación se detallan los metodos para integrar una renta nacional en el sistema de autodeclaraciones.
 
