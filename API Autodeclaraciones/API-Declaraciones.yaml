@@ -103,6 +103,8 @@ paths:
                     reason: 400
                     message: La lista de declarantes debe incluir al representante legal
       description: |
+        Toda petición realizada a Placetopay debe llevar el objeto authorización.
+
         Se utiliza para crear la sesión enviando toda la trama de información, y realizar el pago de la declaración. Este retorna el requestID y el redirecTO.
 
         El API se comporta diferente dependiendo del tipo de declaración, por ende se debe tener en cuenta algunos campos especiales:
@@ -1344,11 +1346,9 @@ paths:
                     reason: 401
                     message: El usuario no está autorizado para ejecutar la acción.
       description: |-
-        Toda petición realizada a Placetopay debe llevar el objeto authorización. Esta se implementa en caso de necesitar crear/actualizar una empresa en el sistema de Autodeclaraciones. Las empresas son todas aquellas entidades que deben declarar los impuestos.
+        Esta se implementa en caso de necesitar crear/actualizar una empresa en el sistema de Autodeclaraciones. Las empresas son todas aquellas entidades que deben declarar los impuestos.
 
         La empresa se puede inactivar usando el parametro status
-
-        Permisos requeridos sobre el usuario API: manage-companies.api
       parameters:
         - schema:
             type: string
